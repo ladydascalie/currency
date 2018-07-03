@@ -1,22 +1,23 @@
 package main
 
 import (
-	"log"
-	"io/ioutil"
+	"bytes"
 	"encoding/xml"
-	"github.com/ladydascalie/std_currency/cmd/scaffold"
-	"text/template"
+	"go/format"
+	"io"
+	"io/ioutil"
+	"log"
+	"net/http"
 	"os"
 	"strconv"
-	"net/http"
-	"go/format"
-	"bytes"
-	"io"
+	"text/template"
+
+	"github.com/ladydascalie/std_currency/cmd/scaffold"
 )
 
 const (
 	templateFile = "cmd/std.txt" // must include the cmd prefix because this code is called from the Makefile
-	outputFile   = "std.go"       // we want this to output in the top directory
+	outputFile   = "std.go"      // we want this to output in the top directory
 
 	// For the source on this, please check:
 	// - International Organization for Standardization: https://www.iso.org/iso-4217-currency-codes.html
