@@ -13,12 +13,21 @@ import "fmt"
 type Currency struct {
     code string
     minorUnits int
+    factor int
 }
 
 // Code returns the currency code to the user
 func (c *Currency) Code() string { return c.code }
+
 // MinorUnits returns the minor unit to the user
 func (c *Currency) MinorUnits() int { return c.minorUnits }
+
+// Factor returns the factor by which a float should be multiplied
+// to get back to it's smallest denomination
+//
+// Example:
+//  pence := 100.00 * currency.GBP.Factor()
+func (c *Currency) Factor() int { return c.factor }
 
 // GetCurrency returns a currency struct if the provided
 // code is contained within the valid codes. Otherwise
@@ -44,11 +53,11 @@ func Valid(code string) bool {
     return false
 }
 
-
+// Following are all the structs containing currency data
 var (
     {{ range $k, $v := . -}}
         // {{$v.Code}} currency struct
-        {{$v.Code}} = Currency{ code: "{{$v.Code}}", minorUnits: {{$v.Units}} }
+        {{$v.Code}} = Currency{ code: "{{$v.Code}}", minorUnits: {{$v.Units}}, factor: {{$v.Factor}}}
     {{ end }}
 )
 

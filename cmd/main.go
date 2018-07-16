@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/xml"
+	"fmt"
 	"go/format"
 	"io"
 	"io/ioutil"
@@ -10,6 +11,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"strings"
 	"text/template"
 
 	"github.com/ladydascalie/currency/cmd/scaffold"
@@ -59,8 +61,9 @@ func getLatestISO4217() (err error, iso scaffold.ISO4217) {
 }
 
 type currency struct {
-	Code  string
-	Units int
+	Code   string
+	Units  int
+	Factor string
 }
 
 func buildCurrencyList(iso scaffold.ISO4217) []currency {
@@ -95,8 +98,9 @@ func buildCurrencyList(iso scaffold.ISO4217) []currency {
 		}
 
 		currencies = append(currencies, currency{
-			Code:  entry.Code,
-			Units: unit,
+			Code:   entry.Code,
+			Units:  unit,
+			Factor: fmt.Sprintf("1%s", strings.Repeat("0", unit)),
 		})
 	}
 	return currencies
