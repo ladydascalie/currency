@@ -29,10 +29,10 @@ func (c *Currency) MinorUnits() int { return c.minorUnits }
 //  pence := 100.00 * currency.GBP.Factor()
 func (c *Currency) Factor() int { return c.factor }
 
-// GetCurrency returns a currency struct if the provided
+// Get returns a currency struct if the provided
 // code is contained within the valid codes. Otherwise
 // an error will be returned
-func GetCurrency(code string) (*Currency, error) {
+func Get(code string) (*Currency, error) {
     if Valid(code) {
         val, ok := currencies[code]
         if ok {
