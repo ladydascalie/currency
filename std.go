@@ -29,6 +29,12 @@ func (c *Currency) MinorUnits() int { return c.minorUnits }
 //  pence := 100.00 * currency.GBP.Factor()
 func (c *Currency) Factor() int { return c.factor }
 
+// FactorI64 returns the factor, converted to a int64
+func (c *Currency) FactorI64() int64 { return int64(c.factor) }
+
+// FactorF64 returns the factor, converted to a float64
+func (c *Currency) FactorF64() float64 { return float64(c.factor) }
+
 // Get returns a currency struct if the provided
 // code is contained within the valid codes. Otherwise
 // an error will be returned
@@ -377,12 +383,14 @@ var (
 	UYU = Currency{code: "UYU", minorUnits: 2, factor: 100}
 	// UYI currency struct
 	UYI = Currency{code: "UYI", minorUnits: 0, factor: 1}
+	// UYW currency struct
+	UYW = Currency{code: "UYW", minorUnits: 4, factor: 10000}
 	// UZS currency struct
 	UZS = Currency{code: "UZS", minorUnits: 2, factor: 100}
 	// VUV currency struct
 	VUV = Currency{code: "VUV", minorUnits: 0, factor: 1}
-	// VEF currency struct
-	VEF = Currency{code: "VEF", minorUnits: 2, factor: 100}
+	// VES currency struct
+	VES = Currency{code: "VES", minorUnits: 2, factor: 100}
 	// VND currency struct
 	VND = Currency{code: "VND", minorUnits: 0, factor: 1}
 	// YER currency struct
@@ -575,9 +583,10 @@ var currencies = map[string]Currency{
 	"USN": USN,
 	"UYU": UYU,
 	"UYI": UYI,
+	"UYW": UYW,
 	"UZS": UZS,
 	"VUV": VUV,
-	"VEF": VEF,
+	"VES": VES,
 	"VND": VND,
 	"YER": YER,
 	"ZMW": ZMW,
@@ -757,9 +766,10 @@ var ValidCodes = []string{
 	"USN",
 	"UYU",
 	"UYI",
+	"UYW",
 	"UZS",
 	"VUV",
-	"VEF",
+	"VES",
 	"VND",
 	"YER",
 	"ZMW",
