@@ -20,7 +20,7 @@ class Currencies {
         [
             {{- $n := len . }}
             {{ range $k, $v := . -}}
-                "{{$v.Code}}": {{$v.Code}}{{if eq (inc $k) $n}}{{else}}{{if $k}},{{end}}{{end}}
+                "{{$v.Code}}": {{$v.Code}}{{if eq (inc $k) $n}}{{else}}{{if $k}},{{end}}{{if eq $k 0}},{{end}}{{end}}
             {{ end -}}
         ]
 

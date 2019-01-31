@@ -195,7 +195,7 @@ class Currencies {
 
     static let allCurrencies: [String: Currency] =
         [
-            "AED": AED
+            "AED": AED,
             "AFN": AFN,
             "ALL": ALL,
             "AMD": AMD,
