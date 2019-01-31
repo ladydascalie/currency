@@ -10,6 +10,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 	"text/template"
@@ -40,8 +41,9 @@ func main() {
 		log.Fatalf("could not build currency list")
 	}
 
-	generateStdPakcage(currencies)
-
+	for _, gen := range generators {
+		gen(currencies)
+	}
 }
 func getLatestISO4217() (err error, iso scaffold.ISO4217) {
 	res, err := http.Get(isoStdDownload)
@@ -103,10 +105,54 @@ func buildCurrencyList(iso scaffold.ISO4217) []currency {
 			Factor: fmt.Sprintf("1%s", strings.Repeat("0", unit)),
 		})
 	}
+	sort.Slice(currencies, func(i, j int) bool {
+		return currencies[i].Code < currencies[j].Code
+	})
 	return currencies
 }
 
-func generateStdPakcage(currencies []currency) {
+type generatorFunc func(currencies []currency)
+
+var generators = []generatorFunc{
+	generateGoPackage,
+	generateSwiftPackage,
+}
+
+var fns = template.FuncMap{
+	"inc": func(x int) int {
+		return x + 1
+	},
+}
+
+func generateSwiftPackage(currencies []currency) {
+	const (
+		infile  = "cmd/swift.txt"
+		outfile = "std.swift"
+	)
+	tpl, err := ioutil.ReadFile(infile)
+	if err != nil {
+		log.Fatalf("cannot open template file: %v", err)
+	}
+
+	t := template.Must(template.New("std").Funcs(fns).Parse(string(tpl)))
+	buf := new(bytes.Buffer)
+	err = t.Execute(buf, currencies)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	to, err := os.Create(outfile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer to.Close()
+
+	_, err = io.Copy(to, buf)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+func generateGoPackage(currencies []currency) {
 	tpl, err := ioutil.ReadFile(templateFile)
 	if err != nil {
 		log.Fatalf("cannot open template file: %v", err)

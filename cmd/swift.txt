@@ -1,0 +1,34 @@
+import UIKit
+
+struct Currency {
+    /// The `ISO 4217` currency code
+    var code: String
+
+    /// The number of digits to display after the decimal point when displaying the currency
+    var minorUnits: Int
+
+    /// The factor to divide the currency figure by before handing to a currency formatter
+    var factor: Int
+}
+
+class Currencies {
+    {{ range $k, $v := . -}}
+        static let {{$v.Code}}: Currency = Currency(code: "{{$v.Code}}", minorUnits: {{$v.Units}}, factor: {{$v.Factor}})
+    {{ end }}
+
+    static let allCurrencies: [String: Currency] =
+        [
+            {{- $n := len . }}
+            {{ range $k, $v := . -}}
+                "{{$v.Code}}": {{$v.Code}}{{if eq (inc $k) $n}}{{else}}{{if $k}},{{end}}{{end}}
+            {{ end -}}
+        ]
+
+    /// Look up a currency struct containing currency and formatting information
+    ///
+    /// - Parameter code: The `ISO 4217` currency code to search for
+    /// - Returns: A `Currency` object, if supported. Otherwise nil.
+    class func currency(for code: String) -> Currency? {
+        return allCurrencies[code]
+    }
+}
