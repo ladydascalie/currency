@@ -1,0 +1,7 @@
+var stdCurrency = {
+    {{- $n := len . }}
+    {{ range $k, $v := . -}}
+        // {{$v.Code}} currency object
+        {{$v.Code}}: { code: "{{$v.Code}}", minorUnits: {{$v.Units}}, factor: {{$v.Factor}}}{{if eq (inc $k) $n}}{{else}}{{if $k}},{{end}}{{if eq $k 0}},{{end}}{{end}}
+    {{ end -}}
+};

@@ -116,6 +116,7 @@ type generatorFunc func(currencies []currency)
 var generators = []generatorFunc{
 	generateGoPackage,
 	generateSwiftPackage,
+	generateJavascriptPackage,
 }
 
 var fns = template.FuncMap{
@@ -124,6 +125,34 @@ var fns = template.FuncMap{
 	},
 }
 
+func generateJavascriptPackage(currencies []currency) {
+	const (
+		infile  = "cmd/js.txt"
+		outfile = "std_currency.js"
+	)
+	tpl, err := ioutil.ReadFile(infile)
+	if err != nil {
+		log.Fatalf("cannot open template file: %v", err)
+	}
+
+	t := template.Must(template.New("js").Funcs(fns).Parse(string(tpl)))
+	buf := new(bytes.Buffer)
+	err = t.Execute(buf, currencies)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	to, err := os.Create(outfile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer to.Close()
+
+	_, err = io.Copy(to, buf)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
 func generateSwiftPackage(currencies []currency) {
 	const (
 		infile  = "cmd/swift.txt"
@@ -134,7 +163,7 @@ func generateSwiftPackage(currencies []currency) {
 		log.Fatalf("cannot open template file: %v", err)
 	}
 
-	t := template.Must(template.New("std").Funcs(fns).Parse(string(tpl)))
+	t := template.Must(template.New("swift").Funcs(fns).Parse(string(tpl)))
 	buf := new(bytes.Buffer)
 	err = t.Execute(buf, currencies)
 	if err != nil {
@@ -158,7 +187,7 @@ func generateGoPackage(currencies []currency) {
 		log.Fatalf("cannot open template file: %v", err)
 	}
 
-	t := template.Must(template.New("std").Parse(string(tpl)))
+	t := template.Must(template.New("go").Parse(string(tpl)))
 	buf := new(bytes.Buffer)
 	err = t.Execute(buf, currencies)
 	if err != nil {
