@@ -117,6 +117,7 @@ var generators = []generatorFunc{
 	generateGoPackage,
 	generateSwiftPackage,
 	generateJavascriptPackage,
+	generateKotlinPackage,
 }
 
 var fns = template.FuncMap{
@@ -136,6 +137,34 @@ func generateJavascriptPackage(currencies []currency) {
 	}
 
 	t := template.Must(template.New("js").Funcs(fns).Parse(string(tpl)))
+	buf := new(bytes.Buffer)
+	err = t.Execute(buf, currencies)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	to, err := os.Create(outfile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer to.Close()
+
+	_, err = io.Copy(to, buf)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+func generateKotlinPackage(currencies []currency) {
+	const (
+		infile  = "cmd/kotlin.txt"
+		outfile = "std.kt"
+	)
+	tpl, err := ioutil.ReadFile(infile)
+	if err != nil {
+		log.Fatalf("cannot open template file: %v", err)
+	}
+
+	t := template.Must(template.New("kotlin").Funcs(fns).Parse(string(tpl)))
 	buf := new(bytes.Buffer)
 	err = t.Execute(buf, currencies)
 	if err != nil {

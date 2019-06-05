@@ -1,0 +1,10 @@
+data class Currency(val currencyCode: String, val minorUnits: Int, val factor: Int) {
+    companion object {
+        val currencyMap = mapOf<String, Currency>(
+        {{- $n := len . }}
+        {{ range $k, $v := . -}}
+            "{{$v.Code}}" to Currency("{{$v.Code}}", {{$v.Units}}, {{$v.Factor}}){{if eq (inc $k) $n}}{{else}}{{if $k}},{{end}}{{if eq $k 0}},{{end}}{{end}}
+        {{ end -}}
+        )
+    }
+}
