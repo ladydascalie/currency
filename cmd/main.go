@@ -66,6 +66,7 @@ type currency struct {
 	Code   string
 	Units  int
 	Factor string
+	Name   string
 }
 
 func buildCurrencyList(iso scaffold.ISO4217) []currency {
@@ -103,6 +104,7 @@ func buildCurrencyList(iso scaffold.ISO4217) []currency {
 			Code:   entry.Code,
 			Units:  unit,
 			Factor: fmt.Sprintf("1%s", strings.Repeat("0", unit)),
+			Name:   entry.Description,
 		})
 	}
 	sort.Slice(currencies, func(i, j int) bool {
