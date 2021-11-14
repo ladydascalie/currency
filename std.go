@@ -369,6 +369,8 @@ var (
 	UYW = Currency{code: "UYW", minorUnits: 4, factor: 10000}
 	// UZS currency struct
 	UZS = Currency{code: "UZS", minorUnits: 2, factor: 100}
+	// VED currency struct
+	VED = Currency{code: "VED", minorUnits: 2, factor: 100}
 	// VES currency struct
 	VES = Currency{code: "VES", minorUnits: 2, factor: 100}
 	// VND currency struct
@@ -576,6 +578,7 @@ var currencies = map[string]Currency{
 	"UYU": UYU,
 	"UYW": UYW,
 	"UZS": UZS,
+	"VED": VED,
 	"VES": VES,
 	"VND": VND,
 	"VUV": VUV,
@@ -759,6 +762,7 @@ var ValidCodes = []string{
 	"UYU",
 	"UYW",
 	"UZS",
+	"VED",
 	"VES",
 	"VND",
 	"VUV",

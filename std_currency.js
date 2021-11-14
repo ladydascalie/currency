@@ -307,6 +307,8 @@ var stdCurrency = {
     UYW: { code: "UYW", name: "Unidad Previsional" minorUnits: 4, factor: 10000},
     // UZS currency object
     UZS: { code: "UZS", name: "Uzbekistan Sum" minorUnits: 2, factor: 100},
+    // VED currency object
+    VED: { code: "VED", name: "Bolívar Soberano" minorUnits: 2, factor: 100},
     // VES currency object
     VES: { code: "VES", name: "Bolívar Soberano" minorUnits: 2, factor: 100},
     // VND currency object

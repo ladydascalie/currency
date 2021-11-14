@@ -155,6 +155,7 @@ data class Currency(val currencyCode: String, val minorUnits: Int, val factor: I
         "UYU" to Currency("UYU", 2, 100),
         "UYW" to Currency("UYW", 4, 10000),
         "UZS" to Currency("UZS", 2, 100),
+        "VED" to Currency("VED", 2, 100),
         "VES" to Currency("VES", 2, 100),
         "VND" to Currency("VND", 0, 1),
         "VUV" to Currency("VUV", 0, 1),

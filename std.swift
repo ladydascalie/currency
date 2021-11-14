@@ -166,6 +166,7 @@ class Currencies {
     static let UYU: Currency = Currency(code: "UYU", minorUnits: 2, factor: 100)
     static let UYW: Currency = Currency(code: "UYW", minorUnits: 4, factor: 10000)
     static let UZS: Currency = Currency(code: "UZS", minorUnits: 2, factor: 100)
+    static let VED: Currency = Currency(code: "VED", minorUnits: 2, factor: 100)
     static let VES: Currency = Currency(code: "VES", minorUnits: 2, factor: 100)
     static let VND: Currency = Currency(code: "VND", minorUnits: 0, factor: 1)
     static let VUV: Currency = Currency(code: "VUV", minorUnits: 0, factor: 1)
@@ -349,6 +350,7 @@ class Currencies {
             "UYU": UYU,
             "UYW": UYW,
             "UZS": UZS,
+            "VED": VED,
             "VES": VES,
             "VND": VND,
             "VUV": VUV,
