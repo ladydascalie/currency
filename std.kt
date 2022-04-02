@@ -130,6 +130,7 @@ data class Currency(val currencyCode: String, val minorUnits: Int, val factor: I
         "SEK" to Currency("SEK", 2, 100),
         "SGD" to Currency("SGD", 2, 100),
         "SHP" to Currency("SHP", 2, 100),
+        "SLE" to Currency("SLE", 2, 100),
         "SLL" to Currency("SLL", 2, 100),
         "SOS" to Currency("SOS", 2, 100),
         "SRD" to Currency("SRD", 2, 100),

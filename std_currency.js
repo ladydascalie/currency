@@ -257,6 +257,8 @@ var stdCurrency = {
     SGD: { code: "SGD", name: "Singapore Dollar" minorUnits: 2, factor: 100},
     // SHP currency object
     SHP: { code: "SHP", name: "Saint Helena Pound" minorUnits: 2, factor: 100},
+    // SLE currency object
+    SLE: { code: "SLE", name: "Leone" minorUnits: 2, factor: 100},
     // SLL currency object
     SLL: { code: "SLL", name: "Leone" minorUnits: 2, factor: 100},
     // SOS currency object

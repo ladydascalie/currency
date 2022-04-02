@@ -319,6 +319,8 @@ var (
 	SGD = Currency{code: "SGD", minorUnits: 2, factor: 100}
 	// SHP currency struct
 	SHP = Currency{code: "SHP", minorUnits: 2, factor: 100}
+	// SLE currency struct
+	SLE = Currency{code: "SLE", minorUnits: 2, factor: 100}
 	// SLL currency struct
 	SLL = Currency{code: "SLL", minorUnits: 2, factor: 100}
 	// SOS currency struct
@@ -553,6 +555,7 @@ var currencies = map[string]Currency{
 	"SEK": SEK,
 	"SGD": SGD,
 	"SHP": SHP,
+	"SLE": SLE,
 	"SLL": SLL,
 	"SOS": SOS,
 	"SRD": SRD,
@@ -737,6 +740,7 @@ var ValidCodes = []string{
 	"SEK",
 	"SGD",
 	"SHP",
+	"SLE",
 	"SLL",
 	"SOS",
 	"SRD",
