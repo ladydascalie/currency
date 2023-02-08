@@ -73,7 +73,6 @@ class Currencies {
     static let GYD: Currency = Currency(code: "GYD", minorUnits: 2, factor: 100)
     static let HKD: Currency = Currency(code: "HKD", minorUnits: 2, factor: 100)
     static let HNL: Currency = Currency(code: "HNL", minorUnits: 2, factor: 100)
-    static let HRK: Currency = Currency(code: "HRK", minorUnits: 2, factor: 100)
     static let HTG: Currency = Currency(code: "HTG", minorUnits: 2, factor: 100)
     static let HUF: Currency = Currency(code: "HUF", minorUnits: 2, factor: 100)
     static let IDR: Currency = Currency(code: "IDR", minorUnits: 2, factor: 100)
@@ -258,7 +257,6 @@ class Currencies {
             "GYD": GYD,
             "HKD": HKD,
             "HNL": HNL,
-            "HRK": HRK,
             "HTG": HTG,
             "HUF": HUF,
             "IDR": IDR,

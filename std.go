@@ -26,7 +26,8 @@ func (c *Currency) MinorUnits() int { return c.minorUnits }
 // to get back to it's smallest denomination
 //
 // Example:
-//  pence := 100.00 * currency.GBP.Factor()
+//
+//	pence := 100.00 * currency.GBP.Factor()
 func (c *Currency) Factor() int { return c.factor }
 
 // FactorI64 returns the factor, converted to a int64
@@ -183,8 +184,6 @@ var (
 	HKD = Currency{code: "HKD", minorUnits: 2, factor: 100}
 	// HNL currency struct
 	HNL = Currency{code: "HNL", minorUnits: 2, factor: 100}
-	// HRK currency struct
-	HRK = Currency{code: "HRK", minorUnits: 2, factor: 100}
 	// HTG currency struct
 	HTG = Currency{code: "HTG", minorUnits: 2, factor: 100}
 	// HUF currency struct
@@ -487,7 +486,6 @@ var currencies = map[string]Currency{
 	"GYD": GYD,
 	"HKD": HKD,
 	"HNL": HNL,
-	"HRK": HRK,
 	"HTG": HTG,
 	"HUF": HUF,
 	"IDR": IDR,
@@ -672,7 +670,6 @@ var ValidCodes = []string{
 	"GYD",
 	"HKD",
 	"HNL",
-	"HRK",
 	"HTG",
 	"HUF",
 	"IDR",

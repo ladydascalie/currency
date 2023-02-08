@@ -62,7 +62,6 @@ data class Currency(val currencyCode: String, val minorUnits: Int, val factor: I
         "GYD" to Currency("GYD", 2, 100),
         "HKD" to Currency("HKD", 2, 100),
         "HNL" to Currency("HNL", 2, 100),
-        "HRK" to Currency("HRK", 2, 100),
         "HTG" to Currency("HTG", 2, 100),
         "HUF" to Currency("HUF", 2, 100),
         "IDR" to Currency("IDR", 2, 100),

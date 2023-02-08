@@ -121,8 +121,6 @@ var stdCurrency = {
     HKD: { code: "HKD", name: "Hong Kong Dollar" minorUnits: 2, factor: 100},
     // HNL currency object
     HNL: { code: "HNL", name: "Lempira" minorUnits: 2, factor: 100},
-    // HRK currency object
-    HRK: { code: "HRK", name: "Kuna" minorUnits: 2, factor: 100},
     // HTG currency object
     HTG: { code: "HTG", name: "Gourde" minorUnits: 2, factor: 100},
     // HUF currency object

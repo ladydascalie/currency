@@ -25,7 +25,7 @@ const (
 	// For the source on this, please check:
 	// - International Organization for Standardization: https://www.iso.org/iso-4217-currency-codes.html
 	// - Currency Code Services – ISO 4217 Maintenance Agency: https://www.currency-iso.org
-	isoStdDownload = "https://www.currency-iso.org/dam/downloads/lists/list_one.xml"
+	isoStdDownload = "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml"
 )
 
 func main() {
@@ -45,6 +45,7 @@ func main() {
 		gen(currencies)
 	}
 }
+
 func getLatestISO4217() (err error, iso scaffold.ISO4217) {
 	res, err := http.Get(isoStdDownload)
 	if err != nil {
@@ -56,7 +57,7 @@ func getLatestISO4217() (err error, iso scaffold.ISO4217) {
 	}
 	defer res.Body.Close()
 
-	if err := xml.Unmarshal(b, &iso); err != nil {
+	if err = xml.Unmarshal(b, &iso); err != nil {
 		log.Fatal(err)
 	}
 	return err, iso
@@ -156,6 +157,7 @@ func generateJavascriptPackage(currencies []currency) {
 		log.Fatal(err)
 	}
 }
+
 func generateKotlinPackage(currencies []currency) {
 	const (
 		infile  = "cmd/kotlin.txt"
@@ -184,6 +186,7 @@ func generateKotlinPackage(currencies []currency) {
 		log.Fatal(err)
 	}
 }
+
 func generateSwiftPackage(currencies []currency) {
 	const (
 		infile  = "cmd/swift.txt"
@@ -212,6 +215,7 @@ func generateSwiftPackage(currencies []currency) {
 		log.Fatal(err)
 	}
 }
+
 func generateGoPackage(currencies []currency) {
 	tpl, err := ioutil.ReadFile(templateFile)
 	if err != nil {
