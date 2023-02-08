@@ -19,7 +19,7 @@ jobs:
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
-          http_url: https://www.currency-iso.org/dam/downloads/lists/list_one.xml
+          http_url: https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml
           downloaded_filename: cmd/list_one.xml
       # Build the libraries.
       - name: build application
