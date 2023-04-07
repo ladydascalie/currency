@@ -26,7 +26,8 @@ func (c *Currency) MinorUnits() int { return c.minorUnits }
 // to get back to it's smallest denomination
 //
 // Example:
-//  pence := 100.00 * currency.GBP.Factor()
+//
+//	pence := 100.00 * currency.GBP.Factor()
 func (c *Currency) Factor() int { return c.factor }
 
 // FactorI64 returns the factor, converted to a int64
