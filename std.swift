@@ -109,7 +109,6 @@ class Currencies {
     static let MRU: Currency = Currency(code: "MRU", minorUnits: 2, factor: 100)
     static let MUR: Currency = Currency(code: "MUR", minorUnits: 2, factor: 100)
     static let MVR: Currency = Currency(code: "MVR", minorUnits: 2, factor: 100)
-    static let MWK: Currency = Currency(code: "MWK", minorUnits: 2, factor: 100)
     static let MXN: Currency = Currency(code: "MXN", minorUnits: 2, factor: 100)
     static let MXV: Currency = Currency(code: "MXV", minorUnits: 2, factor: 100)
     static let MYR: Currency = Currency(code: "MYR", minorUnits: 2, factor: 100)
@@ -122,14 +121,12 @@ class Currencies {
     static let NZD: Currency = Currency(code: "NZD", minorUnits: 2, factor: 100)
     static let OMR: Currency = Currency(code: "OMR", minorUnits: 3, factor: 1000)
     static let PAB: Currency = Currency(code: "PAB", minorUnits: 2, factor: 100)
-    static let PEN: Currency = Currency(code: "PEN", minorUnits: 2, factor: 100)
     static let PGK: Currency = Currency(code: "PGK", minorUnits: 2, factor: 100)
     static let PHP: Currency = Currency(code: "PHP", minorUnits: 2, factor: 100)
     static let PKR: Currency = Currency(code: "PKR", minorUnits: 2, factor: 100)
     static let PLN: Currency = Currency(code: "PLN", minorUnits: 2, factor: 100)
     static let PYG: Currency = Currency(code: "PYG", minorUnits: 0, factor: 1)
     static let QAR: Currency = Currency(code: "QAR", minorUnits: 2, factor: 100)
-    static let RON: Currency = Currency(code: "RON", minorUnits: 2, factor: 100)
     static let RSD: Currency = Currency(code: "RSD", minorUnits: 2, factor: 100)
     static let RUB: Currency = Currency(code: "RUB", minorUnits: 2, factor: 100)
     static let RWF: Currency = Currency(code: "RWF", minorUnits: 0, factor: 1)
@@ -147,13 +144,11 @@ class Currencies {
     static let STN: Currency = Currency(code: "STN", minorUnits: 2, factor: 100)
     static let SVC: Currency = Currency(code: "SVC", minorUnits: 2, factor: 100)
     static let SYP: Currency = Currency(code: "SYP", minorUnits: 2, factor: 100)
-    static let SZL: Currency = Currency(code: "SZL", minorUnits: 2, factor: 100)
     static let THB: Currency = Currency(code: "THB", minorUnits: 2, factor: 100)
     static let TJS: Currency = Currency(code: "TJS", minorUnits: 2, factor: 100)
     static let TMT: Currency = Currency(code: "TMT", minorUnits: 2, factor: 100)
     static let TND: Currency = Currency(code: "TND", minorUnits: 3, factor: 1000)
     static let TOP: Currency = Currency(code: "TOP", minorUnits: 2, factor: 100)
-    static let TRY: Currency = Currency(code: "TRY", minorUnits: 2, factor: 100)
     static let TTD: Currency = Currency(code: "TTD", minorUnits: 2, factor: 100)
     static let TWD: Currency = Currency(code: "TWD", minorUnits: 2, factor: 100)
     static let TZS: Currency = Currency(code: "TZS", minorUnits: 2, factor: 100)
@@ -190,6 +185,7 @@ class Currencies {
     static let YER: Currency = Currency(code: "YER", minorUnits: 2, factor: 100)
     static let ZAR: Currency = Currency(code: "ZAR", minorUnits: 2, factor: 100)
     static let ZMW: Currency = Currency(code: "ZMW", minorUnits: 2, factor: 100)
+    static let ZWG: Currency = Currency(code: "ZWG", minorUnits: 2, factor: 100)
     static let ZWL: Currency = Currency(code: "ZWL", minorUnits: 2, factor: 100)
     
 
@@ -292,7 +288,6 @@ class Currencies {
             "MRU": MRU,
             "MUR": MUR,
             "MVR": MVR,
-            "MWK": MWK,
             "MXN": MXN,
             "MXV": MXV,
             "MYR": MYR,
@@ -305,14 +300,12 @@ class Currencies {
             "NZD": NZD,
             "OMR": OMR,
             "PAB": PAB,
-            "PEN": PEN,
             "PGK": PGK,
             "PHP": PHP,
             "PKR": PKR,
             "PLN": PLN,
             "PYG": PYG,
             "QAR": QAR,
-            "RON": RON,
             "RSD": RSD,
             "RUB": RUB,
             "RWF": RWF,
@@ -330,13 +323,11 @@ class Currencies {
             "STN": STN,
             "SVC": SVC,
             "SYP": SYP,
-            "SZL": SZL,
             "THB": THB,
             "TJS": TJS,
             "TMT": TMT,
             "TND": TND,
             "TOP": TOP,
-            "TRY": TRY,
             "TTD": TTD,
             "TWD": TWD,
             "TZS": TZS,
@@ -373,6 +364,7 @@ class Currencies {
             "YER": YER,
             "ZAR": ZAR,
             "ZMW": ZMW,
+            "ZWG": ZWG,
             "ZWL": ZWL
             ]
 
