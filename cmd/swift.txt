@@ -9,11 +9,14 @@ struct Currency {
 
     /// The factor to divide the currency figure by before handing to a currency formatter
     var factor: Int
+
+    /// The `ISO 4217` currency name
+    var name: String
 }
 
 class Currencies {
     {{ range $k, $v := . -}}
-        static let {{$v.Code}}: Currency = Currency(code: "{{$v.Code}}", minorUnits: {{$v.Units}}, factor: {{$v.Factor}})
+        static let {{$v.Code}}: Currency = Currency(code: "{{$v.Code}}", minorUnits: {{$v.Units}}, factor: {{$v.Factor}}, name: "{{$v.Name}}")
     {{ end }}
 
     static let allCurrencies: [String: Currency] =

@@ -14,6 +14,7 @@ type Currency struct {
     code string
     minorUnits int
     factor int
+    name string
 }
 
 // Code returns the currency code to the user
@@ -21,6 +22,9 @@ func (c *Currency) Code() string { return c.code }
 
 // MinorUnits returns the minor unit to the user
 func (c *Currency) MinorUnits() int { return c.minorUnits }
+
+// Name returns the currency name as defined in the ISO.
+func (c *Currency) Name() string { return c.name }
 
 // Factor returns the factor by which a float should be multiplied
 // to get back to it's smallest denomination
@@ -63,7 +67,7 @@ func Valid(code string) bool {
 var (
     {{ range $k, $v := . -}}
         // {{$v.Code}} currency struct
-        {{$v.Code}} = Currency{ code: "{{$v.Code}}", minorUnits: {{$v.Units}}, factor: {{$v.Factor}}}
+        {{$v.Code}} = Currency{ code: "{{$v.Code}}", minorUnits: {{$v.Units}}, factor: {{$v.Factor}}, name: "{{$v.Name}}"}
     {{ end }}
 )
 

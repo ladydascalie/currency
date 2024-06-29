@@ -14,6 +14,7 @@ type Currency struct {
 	code       string
 	minorUnits int
 	factor     int
+	name       string
 }
 
 // Code returns the currency code to the user
@@ -21,6 +22,9 @@ func (c *Currency) Code() string { return c.code }
 
 // MinorUnits returns the minor unit to the user
 func (c *Currency) MinorUnits() int { return c.minorUnits }
+
+// Name returns the currency name as defined in the ISO.
+func (c *Currency) Name() string { return c.name }
 
 // Factor returns the factor by which a float should be multiplied
 // to get back to it's smallest denomination
@@ -63,365 +67,365 @@ func Valid(code string) bool {
 // Following are all the structs containing currency data
 var (
 	// AED currency struct
-	AED = Currency{code: "AED", minorUnits: 2, factor: 100}
+	AED = Currency{code: "AED", minorUnits: 2, factor: 100, name: "UAE Dirham"}
 	// AFN currency struct
-	AFN = Currency{code: "AFN", minorUnits: 2, factor: 100}
+	AFN = Currency{code: "AFN", minorUnits: 2, factor: 100, name: "Afghani"}
 	// ALL currency struct
-	ALL = Currency{code: "ALL", minorUnits: 2, factor: 100}
+	ALL = Currency{code: "ALL", minorUnits: 2, factor: 100, name: "Lek"}
 	// AMD currency struct
-	AMD = Currency{code: "AMD", minorUnits: 2, factor: 100}
+	AMD = Currency{code: "AMD", minorUnits: 2, factor: 100, name: "Armenian Dram"}
 	// ANG currency struct
-	ANG = Currency{code: "ANG", minorUnits: 2, factor: 100}
+	ANG = Currency{code: "ANG", minorUnits: 2, factor: 100, name: "Netherlands Antillean Guilder"}
 	// AOA currency struct
-	AOA = Currency{code: "AOA", minorUnits: 2, factor: 100}
+	AOA = Currency{code: "AOA", minorUnits: 2, factor: 100, name: "Kwanza"}
 	// ARS currency struct
-	ARS = Currency{code: "ARS", minorUnits: 2, factor: 100}
+	ARS = Currency{code: "ARS", minorUnits: 2, factor: 100, name: "Argentine Peso"}
 	// AUD currency struct
-	AUD = Currency{code: "AUD", minorUnits: 2, factor: 100}
+	AUD = Currency{code: "AUD", minorUnits: 2, factor: 100, name: "Australian Dollar"}
 	// AWG currency struct
-	AWG = Currency{code: "AWG", minorUnits: 2, factor: 100}
+	AWG = Currency{code: "AWG", minorUnits: 2, factor: 100, name: "Aruban Florin"}
 	// AZN currency struct
-	AZN = Currency{code: "AZN", minorUnits: 2, factor: 100}
+	AZN = Currency{code: "AZN", minorUnits: 2, factor: 100, name: "Azerbaijan Manat"}
 	// BAM currency struct
-	BAM = Currency{code: "BAM", minorUnits: 2, factor: 100}
+	BAM = Currency{code: "BAM", minorUnits: 2, factor: 100, name: "Convertible Mark"}
 	// BBD currency struct
-	BBD = Currency{code: "BBD", minorUnits: 2, factor: 100}
+	BBD = Currency{code: "BBD", minorUnits: 2, factor: 100, name: "Barbados Dollar"}
 	// BDT currency struct
-	BDT = Currency{code: "BDT", minorUnits: 2, factor: 100}
+	BDT = Currency{code: "BDT", minorUnits: 2, factor: 100, name: "Taka"}
 	// BGN currency struct
-	BGN = Currency{code: "BGN", minorUnits: 2, factor: 100}
+	BGN = Currency{code: "BGN", minorUnits: 2, factor: 100, name: "Bulgarian Lev"}
 	// BHD currency struct
-	BHD = Currency{code: "BHD", minorUnits: 3, factor: 1000}
+	BHD = Currency{code: "BHD", minorUnits: 3, factor: 1000, name: "Bahraini Dinar"}
 	// BIF currency struct
-	BIF = Currency{code: "BIF", minorUnits: 0, factor: 1}
+	BIF = Currency{code: "BIF", minorUnits: 0, factor: 1, name: "Burundi Franc"}
 	// BMD currency struct
-	BMD = Currency{code: "BMD", minorUnits: 2, factor: 100}
+	BMD = Currency{code: "BMD", minorUnits: 2, factor: 100, name: "Bermudian Dollar"}
 	// BND currency struct
-	BND = Currency{code: "BND", minorUnits: 2, factor: 100}
+	BND = Currency{code: "BND", minorUnits: 2, factor: 100, name: "Brunei Dollar"}
 	// BOB currency struct
-	BOB = Currency{code: "BOB", minorUnits: 2, factor: 100}
+	BOB = Currency{code: "BOB", minorUnits: 2, factor: 100, name: "Boliviano"}
 	// BOV currency struct
-	BOV = Currency{code: "BOV", minorUnits: 2, factor: 100}
+	BOV = Currency{code: "BOV", minorUnits: 2, factor: 100, name: "Mvdol"}
 	// BRL currency struct
-	BRL = Currency{code: "BRL", minorUnits: 2, factor: 100}
+	BRL = Currency{code: "BRL", minorUnits: 2, factor: 100, name: "Brazilian Real"}
 	// BSD currency struct
-	BSD = Currency{code: "BSD", minorUnits: 2, factor: 100}
+	BSD = Currency{code: "BSD", minorUnits: 2, factor: 100, name: "Bahamian Dollar"}
 	// BTN currency struct
-	BTN = Currency{code: "BTN", minorUnits: 2, factor: 100}
+	BTN = Currency{code: "BTN", minorUnits: 2, factor: 100, name: "Ngultrum"}
 	// BWP currency struct
-	BWP = Currency{code: "BWP", minorUnits: 2, factor: 100}
+	BWP = Currency{code: "BWP", minorUnits: 2, factor: 100, name: "Pula"}
 	// BYN currency struct
-	BYN = Currency{code: "BYN", minorUnits: 2, factor: 100}
+	BYN = Currency{code: "BYN", minorUnits: 2, factor: 100, name: "Belarusian Ruble"}
 	// BZD currency struct
-	BZD = Currency{code: "BZD", minorUnits: 2, factor: 100}
+	BZD = Currency{code: "BZD", minorUnits: 2, factor: 100, name: "Belize Dollar"}
 	// CAD currency struct
-	CAD = Currency{code: "CAD", minorUnits: 2, factor: 100}
+	CAD = Currency{code: "CAD", minorUnits: 2, factor: 100, name: "Canadian Dollar"}
 	// CDF currency struct
-	CDF = Currency{code: "CDF", minorUnits: 2, factor: 100}
+	CDF = Currency{code: "CDF", minorUnits: 2, factor: 100, name: "Congolese Franc"}
 	// CHE currency struct
-	CHE = Currency{code: "CHE", minorUnits: 2, factor: 100}
+	CHE = Currency{code: "CHE", minorUnits: 2, factor: 100, name: "WIR Euro"}
 	// CHF currency struct
-	CHF = Currency{code: "CHF", minorUnits: 2, factor: 100}
+	CHF = Currency{code: "CHF", minorUnits: 2, factor: 100, name: "Swiss Franc"}
 	// CHW currency struct
-	CHW = Currency{code: "CHW", minorUnits: 2, factor: 100}
+	CHW = Currency{code: "CHW", minorUnits: 2, factor: 100, name: "WIR Franc"}
 	// CLF currency struct
-	CLF = Currency{code: "CLF", minorUnits: 4, factor: 10000}
+	CLF = Currency{code: "CLF", minorUnits: 4, factor: 10000, name: "Unidad de Fomento"}
 	// CLP currency struct
-	CLP = Currency{code: "CLP", minorUnits: 0, factor: 1}
+	CLP = Currency{code: "CLP", minorUnits: 0, factor: 1, name: "Chilean Peso"}
 	// CNY currency struct
-	CNY = Currency{code: "CNY", minorUnits: 2, factor: 100}
+	CNY = Currency{code: "CNY", minorUnits: 2, factor: 100, name: "Yuan Renminbi"}
 	// COP currency struct
-	COP = Currency{code: "COP", minorUnits: 2, factor: 100}
+	COP = Currency{code: "COP", minorUnits: 2, factor: 100, name: "Colombian Peso"}
 	// COU currency struct
-	COU = Currency{code: "COU", minorUnits: 2, factor: 100}
+	COU = Currency{code: "COU", minorUnits: 2, factor: 100, name: "Unidad de Valor Real"}
 	// CRC currency struct
-	CRC = Currency{code: "CRC", minorUnits: 2, factor: 100}
+	CRC = Currency{code: "CRC", minorUnits: 2, factor: 100, name: "Costa Rican Colon"}
 	// CUC currency struct
-	CUC = Currency{code: "CUC", minorUnits: 2, factor: 100}
+	CUC = Currency{code: "CUC", minorUnits: 2, factor: 100, name: "Peso Convertible"}
 	// CUP currency struct
-	CUP = Currency{code: "CUP", minorUnits: 2, factor: 100}
+	CUP = Currency{code: "CUP", minorUnits: 2, factor: 100, name: "Cuban Peso"}
 	// CVE currency struct
-	CVE = Currency{code: "CVE", minorUnits: 2, factor: 100}
+	CVE = Currency{code: "CVE", minorUnits: 2, factor: 100, name: "Cabo Verde Escudo"}
 	// CZK currency struct
-	CZK = Currency{code: "CZK", minorUnits: 2, factor: 100}
+	CZK = Currency{code: "CZK", minorUnits: 2, factor: 100, name: "Czech Koruna"}
 	// DJF currency struct
-	DJF = Currency{code: "DJF", minorUnits: 0, factor: 1}
+	DJF = Currency{code: "DJF", minorUnits: 0, factor: 1, name: "Djibouti Franc"}
 	// DKK currency struct
-	DKK = Currency{code: "DKK", minorUnits: 2, factor: 100}
+	DKK = Currency{code: "DKK", minorUnits: 2, factor: 100, name: "Danish Krone"}
 	// DOP currency struct
-	DOP = Currency{code: "DOP", minorUnits: 2, factor: 100}
+	DOP = Currency{code: "DOP", minorUnits: 2, factor: 100, name: "Dominican Peso"}
 	// DZD currency struct
-	DZD = Currency{code: "DZD", minorUnits: 2, factor: 100}
+	DZD = Currency{code: "DZD", minorUnits: 2, factor: 100, name: "Algerian Dinar"}
 	// EGP currency struct
-	EGP = Currency{code: "EGP", minorUnits: 2, factor: 100}
+	EGP = Currency{code: "EGP", minorUnits: 2, factor: 100, name: "Egyptian Pound"}
 	// ERN currency struct
-	ERN = Currency{code: "ERN", minorUnits: 2, factor: 100}
+	ERN = Currency{code: "ERN", minorUnits: 2, factor: 100, name: "Nakfa"}
 	// ETB currency struct
-	ETB = Currency{code: "ETB", minorUnits: 2, factor: 100}
+	ETB = Currency{code: "ETB", minorUnits: 2, factor: 100, name: "Ethiopian Birr"}
 	// EUR currency struct
-	EUR = Currency{code: "EUR", minorUnits: 2, factor: 100}
+	EUR = Currency{code: "EUR", minorUnits: 2, factor: 100, name: "Euro"}
 	// FJD currency struct
-	FJD = Currency{code: "FJD", minorUnits: 2, factor: 100}
+	FJD = Currency{code: "FJD", minorUnits: 2, factor: 100, name: "Fiji Dollar"}
 	// FKP currency struct
-	FKP = Currency{code: "FKP", minorUnits: 2, factor: 100}
+	FKP = Currency{code: "FKP", minorUnits: 2, factor: 100, name: "Falkland Islands Pound"}
 	// GBP currency struct
-	GBP = Currency{code: "GBP", minorUnits: 2, factor: 100}
+	GBP = Currency{code: "GBP", minorUnits: 2, factor: 100, name: "Pound Sterling"}
 	// GEL currency struct
-	GEL = Currency{code: "GEL", minorUnits: 2, factor: 100}
+	GEL = Currency{code: "GEL", minorUnits: 2, factor: 100, name: "Lari"}
 	// GHS currency struct
-	GHS = Currency{code: "GHS", minorUnits: 2, factor: 100}
+	GHS = Currency{code: "GHS", minorUnits: 2, factor: 100, name: "Ghana Cedi"}
 	// GIP currency struct
-	GIP = Currency{code: "GIP", minorUnits: 2, factor: 100}
+	GIP = Currency{code: "GIP", minorUnits: 2, factor: 100, name: "Gibraltar Pound"}
 	// GMD currency struct
-	GMD = Currency{code: "GMD", minorUnits: 2, factor: 100}
+	GMD = Currency{code: "GMD", minorUnits: 2, factor: 100, name: "Dalasi"}
 	// GNF currency struct
-	GNF = Currency{code: "GNF", minorUnits: 0, factor: 1}
+	GNF = Currency{code: "GNF", minorUnits: 0, factor: 1, name: "Guinean Franc"}
 	// GTQ currency struct
-	GTQ = Currency{code: "GTQ", minorUnits: 2, factor: 100}
+	GTQ = Currency{code: "GTQ", minorUnits: 2, factor: 100, name: "Quetzal"}
 	// GYD currency struct
-	GYD = Currency{code: "GYD", minorUnits: 2, factor: 100}
+	GYD = Currency{code: "GYD", minorUnits: 2, factor: 100, name: "Guyana Dollar"}
 	// HKD currency struct
-	HKD = Currency{code: "HKD", minorUnits: 2, factor: 100}
+	HKD = Currency{code: "HKD", minorUnits: 2, factor: 100, name: "Hong Kong Dollar"}
 	// HNL currency struct
-	HNL = Currency{code: "HNL", minorUnits: 2, factor: 100}
+	HNL = Currency{code: "HNL", minorUnits: 2, factor: 100, name: "Lempira"}
 	// HTG currency struct
-	HTG = Currency{code: "HTG", minorUnits: 2, factor: 100}
+	HTG = Currency{code: "HTG", minorUnits: 2, factor: 100, name: "Gourde"}
 	// HUF currency struct
-	HUF = Currency{code: "HUF", minorUnits: 2, factor: 100}
+	HUF = Currency{code: "HUF", minorUnits: 2, factor: 100, name: "Forint"}
 	// IDR currency struct
-	IDR = Currency{code: "IDR", minorUnits: 2, factor: 100}
+	IDR = Currency{code: "IDR", minorUnits: 2, factor: 100, name: "Rupiah"}
 	// ILS currency struct
-	ILS = Currency{code: "ILS", minorUnits: 2, factor: 100}
+	ILS = Currency{code: "ILS", minorUnits: 2, factor: 100, name: "New Israeli Sheqel"}
 	// INR currency struct
-	INR = Currency{code: "INR", minorUnits: 2, factor: 100}
+	INR = Currency{code: "INR", minorUnits: 2, factor: 100, name: "Indian Rupee"}
 	// IQD currency struct
-	IQD = Currency{code: "IQD", minorUnits: 3, factor: 1000}
+	IQD = Currency{code: "IQD", minorUnits: 3, factor: 1000, name: "Iraqi Dinar"}
 	// IRR currency struct
-	IRR = Currency{code: "IRR", minorUnits: 2, factor: 100}
+	IRR = Currency{code: "IRR", minorUnits: 2, factor: 100, name: "Iranian Rial"}
 	// ISK currency struct
-	ISK = Currency{code: "ISK", minorUnits: 0, factor: 1}
+	ISK = Currency{code: "ISK", minorUnits: 0, factor: 1, name: "Iceland Krona"}
 	// JMD currency struct
-	JMD = Currency{code: "JMD", minorUnits: 2, factor: 100}
+	JMD = Currency{code: "JMD", minorUnits: 2, factor: 100, name: "Jamaican Dollar"}
 	// JOD currency struct
-	JOD = Currency{code: "JOD", minorUnits: 3, factor: 1000}
+	JOD = Currency{code: "JOD", minorUnits: 3, factor: 1000, name: "Jordanian Dinar"}
 	// JPY currency struct
-	JPY = Currency{code: "JPY", minorUnits: 0, factor: 1}
+	JPY = Currency{code: "JPY", minorUnits: 0, factor: 1, name: "Yen"}
 	// KES currency struct
-	KES = Currency{code: "KES", minorUnits: 2, factor: 100}
+	KES = Currency{code: "KES", minorUnits: 2, factor: 100, name: "Kenyan Shilling"}
 	// KGS currency struct
-	KGS = Currency{code: "KGS", minorUnits: 2, factor: 100}
+	KGS = Currency{code: "KGS", minorUnits: 2, factor: 100, name: "Som"}
 	// KHR currency struct
-	KHR = Currency{code: "KHR", minorUnits: 2, factor: 100}
+	KHR = Currency{code: "KHR", minorUnits: 2, factor: 100, name: "Riel"}
 	// KMF currency struct
-	KMF = Currency{code: "KMF", minorUnits: 0, factor: 1}
+	KMF = Currency{code: "KMF", minorUnits: 0, factor: 1, name: "Comorian Franc "}
 	// KPW currency struct
-	KPW = Currency{code: "KPW", minorUnits: 2, factor: 100}
+	KPW = Currency{code: "KPW", minorUnits: 2, factor: 100, name: "North Korean Won"}
 	// KRW currency struct
-	KRW = Currency{code: "KRW", minorUnits: 0, factor: 1}
+	KRW = Currency{code: "KRW", minorUnits: 0, factor: 1, name: "Won"}
 	// KWD currency struct
-	KWD = Currency{code: "KWD", minorUnits: 3, factor: 1000}
+	KWD = Currency{code: "KWD", minorUnits: 3, factor: 1000, name: "Kuwaiti Dinar"}
 	// KYD currency struct
-	KYD = Currency{code: "KYD", minorUnits: 2, factor: 100}
+	KYD = Currency{code: "KYD", minorUnits: 2, factor: 100, name: "Cayman Islands Dollar"}
 	// KZT currency struct
-	KZT = Currency{code: "KZT", minorUnits: 2, factor: 100}
+	KZT = Currency{code: "KZT", minorUnits: 2, factor: 100, name: "Tenge"}
 	// LAK currency struct
-	LAK = Currency{code: "LAK", minorUnits: 2, factor: 100}
+	LAK = Currency{code: "LAK", minorUnits: 2, factor: 100, name: "Lao Kip"}
 	// LBP currency struct
-	LBP = Currency{code: "LBP", minorUnits: 2, factor: 100}
+	LBP = Currency{code: "LBP", minorUnits: 2, factor: 100, name: "Lebanese Pound"}
 	// LKR currency struct
-	LKR = Currency{code: "LKR", minorUnits: 2, factor: 100}
+	LKR = Currency{code: "LKR", minorUnits: 2, factor: 100, name: "Sri Lanka Rupee"}
 	// LRD currency struct
-	LRD = Currency{code: "LRD", minorUnits: 2, factor: 100}
+	LRD = Currency{code: "LRD", minorUnits: 2, factor: 100, name: "Liberian Dollar"}
 	// LSL currency struct
-	LSL = Currency{code: "LSL", minorUnits: 2, factor: 100}
+	LSL = Currency{code: "LSL", minorUnits: 2, factor: 100, name: "Loti"}
 	// LYD currency struct
-	LYD = Currency{code: "LYD", minorUnits: 3, factor: 1000}
+	LYD = Currency{code: "LYD", minorUnits: 3, factor: 1000, name: "Libyan Dinar"}
 	// MAD currency struct
-	MAD = Currency{code: "MAD", minorUnits: 2, factor: 100}
+	MAD = Currency{code: "MAD", minorUnits: 2, factor: 100, name: "Moroccan Dirham"}
 	// MDL currency struct
-	MDL = Currency{code: "MDL", minorUnits: 2, factor: 100}
+	MDL = Currency{code: "MDL", minorUnits: 2, factor: 100, name: "Moldovan Leu"}
 	// MGA currency struct
-	MGA = Currency{code: "MGA", minorUnits: 2, factor: 100}
+	MGA = Currency{code: "MGA", minorUnits: 2, factor: 100, name: "Malagasy Ariary"}
 	// MKD currency struct
-	MKD = Currency{code: "MKD", minorUnits: 2, factor: 100}
+	MKD = Currency{code: "MKD", minorUnits: 2, factor: 100, name: "Denar"}
 	// MMK currency struct
-	MMK = Currency{code: "MMK", minorUnits: 2, factor: 100}
+	MMK = Currency{code: "MMK", minorUnits: 2, factor: 100, name: "Kyat"}
 	// MNT currency struct
-	MNT = Currency{code: "MNT", minorUnits: 2, factor: 100}
+	MNT = Currency{code: "MNT", minorUnits: 2, factor: 100, name: "Tugrik"}
 	// MOP currency struct
-	MOP = Currency{code: "MOP", minorUnits: 2, factor: 100}
+	MOP = Currency{code: "MOP", minorUnits: 2, factor: 100, name: "Pataca"}
 	// MRU currency struct
-	MRU = Currency{code: "MRU", minorUnits: 2, factor: 100}
+	MRU = Currency{code: "MRU", minorUnits: 2, factor: 100, name: "Ouguiya"}
 	// MUR currency struct
-	MUR = Currency{code: "MUR", minorUnits: 2, factor: 100}
+	MUR = Currency{code: "MUR", minorUnits: 2, factor: 100, name: "Mauritius Rupee"}
 	// MVR currency struct
-	MVR = Currency{code: "MVR", minorUnits: 2, factor: 100}
+	MVR = Currency{code: "MVR", minorUnits: 2, factor: 100, name: "Rufiyaa"}
 	// MWK currency struct
-	MWK = Currency{code: "MWK", minorUnits: 2, factor: 100}
+	MWK = Currency{code: "MWK", minorUnits: 2, factor: 100, name: "Malawi Kwacha"}
 	// MXN currency struct
-	MXN = Currency{code: "MXN", minorUnits: 2, factor: 100}
+	MXN = Currency{code: "MXN", minorUnits: 2, factor: 100, name: "Mexican Peso"}
 	// MXV currency struct
-	MXV = Currency{code: "MXV", minorUnits: 2, factor: 100}
+	MXV = Currency{code: "MXV", minorUnits: 2, factor: 100, name: "Mexican Unidad de Inversion (UDI)"}
 	// MYR currency struct
-	MYR = Currency{code: "MYR", minorUnits: 2, factor: 100}
+	MYR = Currency{code: "MYR", minorUnits: 2, factor: 100, name: "Malaysian Ringgit"}
 	// MZN currency struct
-	MZN = Currency{code: "MZN", minorUnits: 2, factor: 100}
+	MZN = Currency{code: "MZN", minorUnits: 2, factor: 100, name: "Mozambique Metical"}
 	// NAD currency struct
-	NAD = Currency{code: "NAD", minorUnits: 2, factor: 100}
+	NAD = Currency{code: "NAD", minorUnits: 2, factor: 100, name: "Namibia Dollar"}
 	// NGN currency struct
-	NGN = Currency{code: "NGN", minorUnits: 2, factor: 100}
+	NGN = Currency{code: "NGN", minorUnits: 2, factor: 100, name: "Naira"}
 	// NIO currency struct
-	NIO = Currency{code: "NIO", minorUnits: 2, factor: 100}
+	NIO = Currency{code: "NIO", minorUnits: 2, factor: 100, name: "Cordoba Oro"}
 	// NOK currency struct
-	NOK = Currency{code: "NOK", minorUnits: 2, factor: 100}
+	NOK = Currency{code: "NOK", minorUnits: 2, factor: 100, name: "Norwegian Krone"}
 	// NPR currency struct
-	NPR = Currency{code: "NPR", minorUnits: 2, factor: 100}
+	NPR = Currency{code: "NPR", minorUnits: 2, factor: 100, name: "Nepalese Rupee"}
 	// NZD currency struct
-	NZD = Currency{code: "NZD", minorUnits: 2, factor: 100}
+	NZD = Currency{code: "NZD", minorUnits: 2, factor: 100, name: "New Zealand Dollar"}
 	// OMR currency struct
-	OMR = Currency{code: "OMR", minorUnits: 3, factor: 1000}
+	OMR = Currency{code: "OMR", minorUnits: 3, factor: 1000, name: "Rial Omani"}
 	// PAB currency struct
-	PAB = Currency{code: "PAB", minorUnits: 2, factor: 100}
+	PAB = Currency{code: "PAB", minorUnits: 2, factor: 100, name: "Balboa"}
 	// PEN currency struct
-	PEN = Currency{code: "PEN", minorUnits: 2, factor: 100}
+	PEN = Currency{code: "PEN", minorUnits: 2, factor: 100, name: "Sol"}
 	// PGK currency struct
-	PGK = Currency{code: "PGK", minorUnits: 2, factor: 100}
+	PGK = Currency{code: "PGK", minorUnits: 2, factor: 100, name: "Kina"}
 	// PHP currency struct
-	PHP = Currency{code: "PHP", minorUnits: 2, factor: 100}
+	PHP = Currency{code: "PHP", minorUnits: 2, factor: 100, name: "Philippine Peso"}
 	// PKR currency struct
-	PKR = Currency{code: "PKR", minorUnits: 2, factor: 100}
+	PKR = Currency{code: "PKR", minorUnits: 2, factor: 100, name: "Pakistan Rupee"}
 	// PLN currency struct
-	PLN = Currency{code: "PLN", minorUnits: 2, factor: 100}
+	PLN = Currency{code: "PLN", minorUnits: 2, factor: 100, name: "Zloty"}
 	// PYG currency struct
-	PYG = Currency{code: "PYG", minorUnits: 0, factor: 1}
+	PYG = Currency{code: "PYG", minorUnits: 0, factor: 1, name: "Guarani"}
 	// QAR currency struct
-	QAR = Currency{code: "QAR", minorUnits: 2, factor: 100}
+	QAR = Currency{code: "QAR", minorUnits: 2, factor: 100, name: "Qatari Rial"}
 	// RON currency struct
-	RON = Currency{code: "RON", minorUnits: 2, factor: 100}
+	RON = Currency{code: "RON", minorUnits: 2, factor: 100, name: "Romanian Leu"}
 	// RSD currency struct
-	RSD = Currency{code: "RSD", minorUnits: 2, factor: 100}
+	RSD = Currency{code: "RSD", minorUnits: 2, factor: 100, name: "Serbian Dinar"}
 	// RUB currency struct
-	RUB = Currency{code: "RUB", minorUnits: 2, factor: 100}
+	RUB = Currency{code: "RUB", minorUnits: 2, factor: 100, name: "Russian Ruble"}
 	// RWF currency struct
-	RWF = Currency{code: "RWF", minorUnits: 0, factor: 1}
+	RWF = Currency{code: "RWF", minorUnits: 0, factor: 1, name: "Rwanda Franc"}
 	// SAR currency struct
-	SAR = Currency{code: "SAR", minorUnits: 2, factor: 100}
+	SAR = Currency{code: "SAR", minorUnits: 2, factor: 100, name: "Saudi Riyal"}
 	// SBD currency struct
-	SBD = Currency{code: "SBD", minorUnits: 2, factor: 100}
+	SBD = Currency{code: "SBD", minorUnits: 2, factor: 100, name: "Solomon Islands Dollar"}
 	// SCR currency struct
-	SCR = Currency{code: "SCR", minorUnits: 2, factor: 100}
+	SCR = Currency{code: "SCR", minorUnits: 2, factor: 100, name: "Seychelles Rupee"}
 	// SDG currency struct
-	SDG = Currency{code: "SDG", minorUnits: 2, factor: 100}
+	SDG = Currency{code: "SDG", minorUnits: 2, factor: 100, name: "Sudanese Pound"}
 	// SEK currency struct
-	SEK = Currency{code: "SEK", minorUnits: 2, factor: 100}
+	SEK = Currency{code: "SEK", minorUnits: 2, factor: 100, name: "Swedish Krona"}
 	// SGD currency struct
-	SGD = Currency{code: "SGD", minorUnits: 2, factor: 100}
+	SGD = Currency{code: "SGD", minorUnits: 2, factor: 100, name: "Singapore Dollar"}
 	// SHP currency struct
-	SHP = Currency{code: "SHP", minorUnits: 2, factor: 100}
+	SHP = Currency{code: "SHP", minorUnits: 2, factor: 100, name: "Saint Helena Pound"}
 	// SLE currency struct
-	SLE = Currency{code: "SLE", minorUnits: 2, factor: 100}
+	SLE = Currency{code: "SLE", minorUnits: 2, factor: 100, name: "Leone"}
 	// SOS currency struct
-	SOS = Currency{code: "SOS", minorUnits: 2, factor: 100}
+	SOS = Currency{code: "SOS", minorUnits: 2, factor: 100, name: "Somali Shilling"}
 	// SRD currency struct
-	SRD = Currency{code: "SRD", minorUnits: 2, factor: 100}
+	SRD = Currency{code: "SRD", minorUnits: 2, factor: 100, name: "Surinam Dollar"}
 	// SSP currency struct
-	SSP = Currency{code: "SSP", minorUnits: 2, factor: 100}
+	SSP = Currency{code: "SSP", minorUnits: 2, factor: 100, name: "South Sudanese Pound"}
 	// STN currency struct
-	STN = Currency{code: "STN", minorUnits: 2, factor: 100}
+	STN = Currency{code: "STN", minorUnits: 2, factor: 100, name: "Dobra"}
 	// SVC currency struct
-	SVC = Currency{code: "SVC", minorUnits: 2, factor: 100}
+	SVC = Currency{code: "SVC", minorUnits: 2, factor: 100, name: "El Salvador Colon"}
 	// SYP currency struct
-	SYP = Currency{code: "SYP", minorUnits: 2, factor: 100}
+	SYP = Currency{code: "SYP", minorUnits: 2, factor: 100, name: "Syrian Pound"}
 	// SZL currency struct
-	SZL = Currency{code: "SZL", minorUnits: 2, factor: 100}
+	SZL = Currency{code: "SZL", minorUnits: 2, factor: 100, name: "Lilangeni"}
 	// THB currency struct
-	THB = Currency{code: "THB", minorUnits: 2, factor: 100}
+	THB = Currency{code: "THB", minorUnits: 2, factor: 100, name: "Baht"}
 	// TJS currency struct
-	TJS = Currency{code: "TJS", minorUnits: 2, factor: 100}
+	TJS = Currency{code: "TJS", minorUnits: 2, factor: 100, name: "Somoni"}
 	// TMT currency struct
-	TMT = Currency{code: "TMT", minorUnits: 2, factor: 100}
+	TMT = Currency{code: "TMT", minorUnits: 2, factor: 100, name: "Turkmenistan New Manat"}
 	// TND currency struct
-	TND = Currency{code: "TND", minorUnits: 3, factor: 1000}
+	TND = Currency{code: "TND", minorUnits: 3, factor: 1000, name: "Tunisian Dinar"}
 	// TOP currency struct
-	TOP = Currency{code: "TOP", minorUnits: 2, factor: 100}
+	TOP = Currency{code: "TOP", minorUnits: 2, factor: 100, name: "Pa’anga"}
 	// TRY currency struct
-	TRY = Currency{code: "TRY", minorUnits: 2, factor: 100}
+	TRY = Currency{code: "TRY", minorUnits: 2, factor: 100, name: "Turkish Lira"}
 	// TTD currency struct
-	TTD = Currency{code: "TTD", minorUnits: 2, factor: 100}
+	TTD = Currency{code: "TTD", minorUnits: 2, factor: 100, name: "Trinidad and Tobago Dollar"}
 	// TWD currency struct
-	TWD = Currency{code: "TWD", minorUnits: 2, factor: 100}
+	TWD = Currency{code: "TWD", minorUnits: 2, factor: 100, name: "New Taiwan Dollar"}
 	// TZS currency struct
-	TZS = Currency{code: "TZS", minorUnits: 2, factor: 100}
+	TZS = Currency{code: "TZS", minorUnits: 2, factor: 100, name: "Tanzanian Shilling"}
 	// UAH currency struct
-	UAH = Currency{code: "UAH", minorUnits: 2, factor: 100}
+	UAH = Currency{code: "UAH", minorUnits: 2, factor: 100, name: "Hryvnia"}
 	// UGX currency struct
-	UGX = Currency{code: "UGX", minorUnits: 0, factor: 1}
+	UGX = Currency{code: "UGX", minorUnits: 0, factor: 1, name: "Uganda Shilling"}
 	// USD currency struct
-	USD = Currency{code: "USD", minorUnits: 2, factor: 100}
+	USD = Currency{code: "USD", minorUnits: 2, factor: 100, name: "US Dollar"}
 	// USN currency struct
-	USN = Currency{code: "USN", minorUnits: 2, factor: 100}
+	USN = Currency{code: "USN", minorUnits: 2, factor: 100, name: "US Dollar (Next day)"}
 	// UYI currency struct
-	UYI = Currency{code: "UYI", minorUnits: 0, factor: 1}
+	UYI = Currency{code: "UYI", minorUnits: 0, factor: 1, name: "Uruguay Peso en Unidades Indexadas (UI)"}
 	// UYU currency struct
-	UYU = Currency{code: "UYU", minorUnits: 2, factor: 100}
+	UYU = Currency{code: "UYU", minorUnits: 2, factor: 100, name: "Peso Uruguayo"}
 	// UYW currency struct
-	UYW = Currency{code: "UYW", minorUnits: 4, factor: 10000}
+	UYW = Currency{code: "UYW", minorUnits: 4, factor: 10000, name: "Unidad Previsional"}
 	// UZS currency struct
-	UZS = Currency{code: "UZS", minorUnits: 2, factor: 100}
+	UZS = Currency{code: "UZS", minorUnits: 2, factor: 100, name: "Uzbekistan Sum"}
 	// VED currency struct
-	VED = Currency{code: "VED", minorUnits: 2, factor: 100}
+	VED = Currency{code: "VED", minorUnits: 2, factor: 100, name: "Bolívar Soberano"}
 	// VES currency struct
-	VES = Currency{code: "VES", minorUnits: 2, factor: 100}
+	VES = Currency{code: "VES", minorUnits: 2, factor: 100, name: "Bolívar Soberano"}
 	// VND currency struct
-	VND = Currency{code: "VND", minorUnits: 0, factor: 1}
+	VND = Currency{code: "VND", minorUnits: 0, factor: 1, name: "Dong"}
 	// VUV currency struct
-	VUV = Currency{code: "VUV", minorUnits: 0, factor: 1}
+	VUV = Currency{code: "VUV", minorUnits: 0, factor: 1, name: "Vatu"}
 	// WST currency struct
-	WST = Currency{code: "WST", minorUnits: 2, factor: 100}
+	WST = Currency{code: "WST", minorUnits: 2, factor: 100, name: "Tala"}
 	// XAF currency struct
-	XAF = Currency{code: "XAF", minorUnits: 0, factor: 1}
+	XAF = Currency{code: "XAF", minorUnits: 0, factor: 1, name: "CFA Franc BEAC"}
 	// XAG currency struct
-	XAG = Currency{code: "XAG", minorUnits: 0, factor: 1}
+	XAG = Currency{code: "XAG", minorUnits: 0, factor: 1, name: "Silver"}
 	// XAU currency struct
-	XAU = Currency{code: "XAU", minorUnits: 0, factor: 1}
+	XAU = Currency{code: "XAU", minorUnits: 0, factor: 1, name: "Gold"}
 	// XBA currency struct
-	XBA = Currency{code: "XBA", minorUnits: 0, factor: 1}
+	XBA = Currency{code: "XBA", minorUnits: 0, factor: 1, name: "Bond Markets Unit European Composite Unit (EURCO)"}
 	// XBB currency struct
-	XBB = Currency{code: "XBB", minorUnits: 0, factor: 1}
+	XBB = Currency{code: "XBB", minorUnits: 0, factor: 1, name: "Bond Markets Unit European Monetary Unit (E.M.U.-6)"}
 	// XBC currency struct
-	XBC = Currency{code: "XBC", minorUnits: 0, factor: 1}
+	XBC = Currency{code: "XBC", minorUnits: 0, factor: 1, name: "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)"}
 	// XBD currency struct
-	XBD = Currency{code: "XBD", minorUnits: 0, factor: 1}
+	XBD = Currency{code: "XBD", minorUnits: 0, factor: 1, name: "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)"}
 	// XCD currency struct
-	XCD = Currency{code: "XCD", minorUnits: 2, factor: 100}
+	XCD = Currency{code: "XCD", minorUnits: 2, factor: 100, name: "East Caribbean Dollar"}
 	// XDR currency struct
-	XDR = Currency{code: "XDR", minorUnits: 0, factor: 1}
+	XDR = Currency{code: "XDR", minorUnits: 0, factor: 1, name: "SDR (Special Drawing Right)"}
 	// XOF currency struct
-	XOF = Currency{code: "XOF", minorUnits: 0, factor: 1}
+	XOF = Currency{code: "XOF", minorUnits: 0, factor: 1, name: "CFA Franc BCEAO"}
 	// XPD currency struct
-	XPD = Currency{code: "XPD", minorUnits: 0, factor: 1}
+	XPD = Currency{code: "XPD", minorUnits: 0, factor: 1, name: "Palladium"}
 	// XPF currency struct
-	XPF = Currency{code: "XPF", minorUnits: 0, factor: 1}
+	XPF = Currency{code: "XPF", minorUnits: 0, factor: 1, name: "CFP Franc"}
 	// XPT currency struct
-	XPT = Currency{code: "XPT", minorUnits: 0, factor: 1}
+	XPT = Currency{code: "XPT", minorUnits: 0, factor: 1, name: "Platinum"}
 	// XSU currency struct
-	XSU = Currency{code: "XSU", minorUnits: 0, factor: 1}
+	XSU = Currency{code: "XSU", minorUnits: 0, factor: 1, name: "Sucre"}
 	// XTS currency struct
-	XTS = Currency{code: "XTS", minorUnits: 0, factor: 1}
+	XTS = Currency{code: "XTS", minorUnits: 0, factor: 1, name: "Codes specifically reserved for testing purposes"}
 	// XUA currency struct
-	XUA = Currency{code: "XUA", minorUnits: 0, factor: 1}
+	XUA = Currency{code: "XUA", minorUnits: 0, factor: 1, name: "ADB Unit of Account"}
 	// XXX currency struct
-	XXX = Currency{code: "XXX", minorUnits: 0, factor: 1}
+	XXX = Currency{code: "XXX", minorUnits: 0, factor: 1, name: "The codes assigned for transactions where no currency is involved"}
 	// YER currency struct
-	YER = Currency{code: "YER", minorUnits: 2, factor: 100}
+	YER = Currency{code: "YER", minorUnits: 2, factor: 100, name: "Yemeni Rial"}
 	// ZAR currency struct
-	ZAR = Currency{code: "ZAR", minorUnits: 2, factor: 100}
+	ZAR = Currency{code: "ZAR", minorUnits: 2, factor: 100, name: "Rand"}
 	// ZMW currency struct
-	ZMW = Currency{code: "ZMW", minorUnits: 2, factor: 100}
+	ZMW = Currency{code: "ZMW", minorUnits: 2, factor: 100, name: "Zambian Kwacha"}
 	// ZWG currency struct
-	ZWG = Currency{code: "ZWG", minorUnits: 2, factor: 100}
+	ZWG = Currency{code: "ZWG", minorUnits: 2, factor: 100, name: "Zimbabwe Gold"}
 	// ZWL currency struct
-	ZWL = Currency{code: "ZWL", minorUnits: 2, factor: 100}
+	ZWL = Currency{code: "ZWL", minorUnits: 2, factor: 100, name: "Zimbabwe Dollar"}
 )
 
 var currencies = map[string]Currency{

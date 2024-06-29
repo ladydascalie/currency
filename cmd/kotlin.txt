@@ -1,9 +1,9 @@
-data class Currency(val currencyCode: String, val minorUnits: Int, val factor: Int) {
+data class Currency(val currencyCode: String, val minorUnits: Int, val factor: Int, val name: String) {
     companion object {
         val currencyMap = mapOf<String, Currency>(
         {{- $n := len . }}
         {{ range $k, $v := . -}}
-            "{{$v.Code}}" to Currency("{{$v.Code}}", {{$v.Units}}, {{$v.Factor}}){{if eq (inc $k) $n}}{{else}}{{if $k}},{{end}}{{if eq $k 0}},{{end}}{{end}}
+            "{{$v.Code}}" to Currency("{{$v.Code}}", {{$v.Units}}, {{$v.Factor}}, "{{$v.Name}}"){{if eq (inc $k) $n}}{{else}}{{if $k}},{{end}}{{if eq $k 0}},{{end}}{{end}}
         {{ end -}}
         )
     }
