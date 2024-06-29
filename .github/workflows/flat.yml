@@ -25,9 +25,6 @@ jobs:
       - name: build application
         run: make build
       - name: Git Auto Commit
-        # You may pin to the exact commit or the version.
-        # uses: stefanzweifel/git-auto-commit-action@5dd17c3b53a58c1cb5eaab903826abe94765ccd6
-        uses: stefanzweifel/git-auto-commit-action@v4.11.0
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          # Commit message
           commit_message: apply automatic changes
