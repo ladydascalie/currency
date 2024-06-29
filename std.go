@@ -256,6 +256,8 @@ var (
 	MUR = Currency{code: "MUR", minorUnits: 2, factor: 100}
 	// MVR currency struct
 	MVR = Currency{code: "MVR", minorUnits: 2, factor: 100}
+	// MWK currency struct
+	MWK = Currency{code: "MWK", minorUnits: 2, factor: 100}
 	// MXN currency struct
 	MXN = Currency{code: "MXN", minorUnits: 2, factor: 100}
 	// MXV currency struct
@@ -280,6 +282,8 @@ var (
 	OMR = Currency{code: "OMR", minorUnits: 3, factor: 1000}
 	// PAB currency struct
 	PAB = Currency{code: "PAB", minorUnits: 2, factor: 100}
+	// PEN currency struct
+	PEN = Currency{code: "PEN", minorUnits: 2, factor: 100}
 	// PGK currency struct
 	PGK = Currency{code: "PGK", minorUnits: 2, factor: 100}
 	// PHP currency struct
@@ -292,6 +296,8 @@ var (
 	PYG = Currency{code: "PYG", minorUnits: 0, factor: 1}
 	// QAR currency struct
 	QAR = Currency{code: "QAR", minorUnits: 2, factor: 100}
+	// RON currency struct
+	RON = Currency{code: "RON", minorUnits: 2, factor: 100}
 	// RSD currency struct
 	RSD = Currency{code: "RSD", minorUnits: 2, factor: 100}
 	// RUB currency struct
@@ -326,6 +332,8 @@ var (
 	SVC = Currency{code: "SVC", minorUnits: 2, factor: 100}
 	// SYP currency struct
 	SYP = Currency{code: "SYP", minorUnits: 2, factor: 100}
+	// SZL currency struct
+	SZL = Currency{code: "SZL", minorUnits: 2, factor: 100}
 	// THB currency struct
 	THB = Currency{code: "THB", minorUnits: 2, factor: 100}
 	// TJS currency struct
@@ -336,6 +344,8 @@ var (
 	TND = Currency{code: "TND", minorUnits: 3, factor: 1000}
 	// TOP currency struct
 	TOP = Currency{code: "TOP", minorUnits: 2, factor: 100}
+	// TRY currency struct
+	TRY = Currency{code: "TRY", minorUnits: 2, factor: 100}
 	// TTD currency struct
 	TTD = Currency{code: "TTD", minorUnits: 2, factor: 100}
 	// TWD currency struct
@@ -512,6 +522,7 @@ var currencies = map[string]Currency{
 	"MRU": MRU,
 	"MUR": MUR,
 	"MVR": MVR,
+	"MWK": MWK,
 	"MXN": MXN,
 	"MXV": MXV,
 	"MYR": MYR,
@@ -524,12 +535,14 @@ var currencies = map[string]Currency{
 	"NZD": NZD,
 	"OMR": OMR,
 	"PAB": PAB,
+	"PEN": PEN,
 	"PGK": PGK,
 	"PHP": PHP,
 	"PKR": PKR,
 	"PLN": PLN,
 	"PYG": PYG,
 	"QAR": QAR,
+	"RON": RON,
 	"RSD": RSD,
 	"RUB": RUB,
 	"RWF": RWF,
@@ -547,11 +560,13 @@ var currencies = map[string]Currency{
 	"STN": STN,
 	"SVC": SVC,
 	"SYP": SYP,
+	"SZL": SZL,
 	"THB": THB,
 	"TJS": TJS,
 	"TMT": TMT,
 	"TND": TND,
 	"TOP": TOP,
+	"TRY": TRY,
 	"TTD": TTD,
 	"TWD": TWD,
 	"TZS": TZS,
@@ -691,6 +706,7 @@ var ValidCodes = []string{
 	"MRU",
 	"MUR",
 	"MVR",
+	"MWK",
 	"MXN",
 	"MXV",
 	"MYR",
@@ -703,12 +719,14 @@ var ValidCodes = []string{
 	"NZD",
 	"OMR",
 	"PAB",
+	"PEN",
 	"PGK",
 	"PHP",
 	"PKR",
 	"PLN",
 	"PYG",
 	"QAR",
+	"RON",
 	"RSD",
 	"RUB",
 	"RWF",
@@ -726,11 +744,13 @@ var ValidCodes = []string{
 	"STN",
 	"SVC",
 	"SYP",
+	"SZL",
 	"THB",
 	"TJS",
 	"TMT",
 	"TND",
 	"TOP",
+	"TRY",
 	"TTD",
 	"TWD",
 	"TZS",

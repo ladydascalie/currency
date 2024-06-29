@@ -531,6 +531,13 @@
 			<CcyMnrUnts>2</CcyMnrUnts>
 		</CcyNtry>
 		<CcyNtry>
+			<CtryNm>ESWATINI</CtryNm>
+			<CcyNm>Lilangeni</CcyNm>
+			<Ccy>SZL</Ccy>
+			<CcyNbr>748</CcyNbr>
+			<CcyMnrUnts>2</CcyMnrUnts>
+		</CcyNtry>
+		<CcyNtry>
 			<CtryNm>ETHIOPIA</CtryNm>
 			<CcyNm>Ethiopian Birr</CcyNm>
 			<Ccy>ETB</Ccy>
@@ -1000,6 +1007,13 @@
 			<CcyMnrUnts>2</CcyMnrUnts>
 		</CcyNtry>
 		<CcyNtry>
+			<CtryNm>MALAWI</CtryNm>
+			<CcyNm>Malawi Kwacha</CcyNm>
+			<Ccy>MWK</Ccy>
+			<CcyNbr>454</CcyNbr>
+			<CcyMnrUnts>2</CcyMnrUnts>
+		</CcyNtry>
+		<CcyNtry>
 			<CtryNm>MALAYSIA</CtryNm>
 			<CcyNm>Malaysian Ringgit</CcyNm>
 			<Ccy>MYR</Ccy>
@@ -1298,6 +1312,13 @@
 			<CcyMnrUnts>0</CcyMnrUnts>
 		</CcyNtry>
 		<CcyNtry>
+			<CtryNm>PERU</CtryNm>
+			<CcyNm>Sol</CcyNm>
+			<Ccy>PEN</Ccy>
+			<CcyNbr>604</CcyNbr>
+			<CcyMnrUnts>2</CcyMnrUnts>
+		</CcyNtry>
+		<CcyNtry>
 			<CtryNm>PHILIPPINES (THE)</CtryNm>
 			<CcyNm>Philippine Peso</CcyNm>
 			<Ccy>PHP</Ccy>
@@ -1344,6 +1365,13 @@
 			<CcyNm>Euro</CcyNm>
 			<Ccy>EUR</Ccy>
 			<CcyNbr>978</CcyNbr>
+			<CcyMnrUnts>2</CcyMnrUnts>
+		</CcyNtry>
+		<CcyNtry>
+			<CtryNm>ROMANIA</CtryNm>
+			<CcyNm>Romanian Leu</CcyNm>
+			<Ccy>RON</Ccy>
+			<CcyNbr>946</CcyNbr>
 			<CcyMnrUnts>2</CcyMnrUnts>
 		</CcyNtry>
 		<CcyNtry>
@@ -1671,6 +1699,13 @@
 			<Ccy>TND</Ccy>
 			<CcyNbr>788</CcyNbr>
 			<CcyMnrUnts>3</CcyMnrUnts>
+		</CcyNtry>
+		<CcyNtry>
+			<CtryNm>TÜRKİYE</CtryNm>
+			<CcyNm>Turkish Lira</CcyNm>
+			<Ccy>TRY</Ccy>
+			<CcyNbr>949</CcyNbr>
+			<CcyMnrUnts>2</CcyMnrUnts>
 		</CcyNtry>
 		<CcyNtry>
 			<CtryNm>TURKMENISTAN</CtryNm>

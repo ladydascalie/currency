@@ -193,6 +193,8 @@ var stdCurrency = {
     MUR: { code: "MUR", name: "Mauritius Rupee", minorUnits: 2, factor: 100},
     // MVR currency object
     MVR: { code: "MVR", name: "Rufiyaa", minorUnits: 2, factor: 100},
+    // MWK currency object
+    MWK: { code: "MWK", name: "Malawi Kwacha", minorUnits: 2, factor: 100},
     // MXN currency object
     MXN: { code: "MXN", name: "Mexican Peso", minorUnits: 2, factor: 100},
     // MXV currency object
@@ -217,6 +219,8 @@ var stdCurrency = {
     OMR: { code: "OMR", name: "Rial Omani", minorUnits: 3, factor: 1000},
     // PAB currency object
     PAB: { code: "PAB", name: "Balboa", minorUnits: 2, factor: 100},
+    // PEN currency object
+    PEN: { code: "PEN", name: "Sol", minorUnits: 2, factor: 100},
     // PGK currency object
     PGK: { code: "PGK", name: "Kina", minorUnits: 2, factor: 100},
     // PHP currency object
@@ -229,6 +233,8 @@ var stdCurrency = {
     PYG: { code: "PYG", name: "Guarani", minorUnits: 0, factor: 1},
     // QAR currency object
     QAR: { code: "QAR", name: "Qatari Rial", minorUnits: 2, factor: 100},
+    // RON currency object
+    RON: { code: "RON", name: "Romanian Leu", minorUnits: 2, factor: 100},
     // RSD currency object
     RSD: { code: "RSD", name: "Serbian Dinar", minorUnits: 2, factor: 100},
     // RUB currency object
@@ -263,6 +269,8 @@ var stdCurrency = {
     SVC: { code: "SVC", name: "El Salvador Colon", minorUnits: 2, factor: 100},
     // SYP currency object
     SYP: { code: "SYP", name: "Syrian Pound", minorUnits: 2, factor: 100},
+    // SZL currency object
+    SZL: { code: "SZL", name: "Lilangeni", minorUnits: 2, factor: 100},
     // THB currency object
     THB: { code: "THB", name: "Baht", minorUnits: 2, factor: 100},
     // TJS currency object
@@ -273,6 +281,8 @@ var stdCurrency = {
     TND: { code: "TND", name: "Tunisian Dinar", minorUnits: 3, factor: 1000},
     // TOP currency object
     TOP: { code: "TOP", name: "Pa’anga", minorUnits: 2, factor: 100},
+    // TRY currency object
+    TRY: { code: "TRY", name: "Turkish Lira", minorUnits: 2, factor: 100},
     // TTD currency object
     TTD: { code: "TTD", name: "Trinidad and Tobago Dollar", minorUnits: 2, factor: 100},
     // TWD currency object
