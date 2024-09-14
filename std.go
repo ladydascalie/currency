@@ -424,8 +424,6 @@ var (
 	ZMW = Currency{code: "ZMW", minorUnits: 2, factor: 100, name: "Zambian Kwacha"}
 	// ZWG currency struct
 	ZWG = Currency{code: "ZWG", minorUnits: 2, factor: 100, name: "Zimbabwe Gold"}
-	// ZWL currency struct
-	ZWL = Currency{code: "ZWL", minorUnits: 2, factor: 100, name: "Zimbabwe Dollar"}
 )
 
 var currencies = map[string]Currency{
@@ -608,7 +606,6 @@ var currencies = map[string]Currency{
 	"ZAR": ZAR,
 	"ZMW": ZMW,
 	"ZWG": ZWG,
-	"ZWL": ZWL,
 }
 
 // ValidCodes is provided so that you may build your own validation against it
@@ -792,5 +789,4 @@ var ValidCodes = []string{
 	"ZAR",
 	"ZMW",
 	"ZWG",
-	"ZWL",
 }

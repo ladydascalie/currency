@@ -179,8 +179,7 @@ data class Currency(val currencyCode: String, val minorUnits: Int, val factor: I
         "YER" to Currency("YER", 2, 100, "Yemeni Rial"),
         "ZAR" to Currency("ZAR", 2, 100, "Rand"),
         "ZMW" to Currency("ZMW", 2, 100, "Zambian Kwacha"),
-        "ZWG" to Currency("ZWG", 2, 100, "Zimbabwe Gold"),
-        "ZWL" to Currency("ZWL", 2, 100, "Zimbabwe Dollar")
+        "ZWG" to Currency("ZWG", 2, 100, "Zimbabwe Gold")
         )
     }
 }

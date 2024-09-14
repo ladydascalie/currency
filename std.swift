@@ -194,7 +194,6 @@ class Currencies {
     static let ZAR: Currency = Currency(code: "ZAR", minorUnits: 2, factor: 100, name: "Rand")
     static let ZMW: Currency = Currency(code: "ZMW", minorUnits: 2, factor: 100, name: "Zambian Kwacha")
     static let ZWG: Currency = Currency(code: "ZWG", minorUnits: 2, factor: 100, name: "Zimbabwe Gold")
-    static let ZWL: Currency = Currency(code: "ZWL", minorUnits: 2, factor: 100, name: "Zimbabwe Dollar")
     
 
     static let allCurrencies: [String: Currency] =
@@ -377,8 +376,7 @@ class Currencies {
             "YER": YER,
             "ZAR": ZAR,
             "ZMW": ZMW,
-            "ZWG": ZWG,
-            "ZWL": ZWL
+            "ZWG": ZWG
             ]
 
     /// Look up a currency struct containing currency and formatting information

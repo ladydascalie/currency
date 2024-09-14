@@ -356,7 +356,5 @@ var stdCurrency = {
     // ZMW currency object
     ZMW: { code: "ZMW", name: "Zambian Kwacha", minorUnits: 2, factor: 100, name: "Zambian Kwacha"},
     // ZWG currency object
-    ZWG: { code: "ZWG", name: "Zimbabwe Gold", minorUnits: 2, factor: 100, name: "Zimbabwe Gold"},
-    // ZWL currency object
-    ZWL: { code: "ZWL", name: "Zimbabwe Dollar", minorUnits: 2, factor: 100, name: "Zimbabwe Dollar"}
+    ZWG: { code: "ZWG", name: "Zimbabwe Gold", minorUnits: 2, factor: 100, name: "Zimbabwe Gold"}
     };
