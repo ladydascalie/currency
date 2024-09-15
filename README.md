@@ -9,21 +9,24 @@ Data is graciously provided by:
 
 ## Usage:
 
-```
+```go
 package main
 
+import (
+	"fmt"
+	"github.com/ladydascalie/currency"
+)
+
 func main() {
-	// Validation of codes.
-	ok := currency.Valid("ABC")
-	if !ok {
-		// whatever you need.
+	// Validate currency code.
+	if !currency.Valid("ABC") {
+		// Handle invalid currency code.
+		fmt.Println("Invalid currency code")
 	}
 
-	// easy to get the values
-	fmt.Println(currency.USD.Code())
-	// Output: USD
-
-	fmt.Println(currency.USD.MinorUnit())
-	// Output: 2
+	// Retrieve and print currency values.
+	fmt.Println(currency.USD.Code())      // Output: USD
+	fmt.Println(currency.USD.MinorUnit()) // Output: 2
 }
+
 ``` 
