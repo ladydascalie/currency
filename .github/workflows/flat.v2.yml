@@ -1,0 +1,30 @@
+name: data
+on:
+  schedule:
+    - cron: 0 0 * * *
+  workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/flat.yml
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: v1.x
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml
+          downloaded_filename: v2/cmd/list_one.xml
+      # Build the libraries.
+      - name: build application
+        run: cd v2 && make build
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: apply automatic changes
