@@ -1,4 +1,4 @@
-name: data
+name: data.v2
 on:
   schedule:
     - cron: 0 0 * * *
