@@ -19,7 +19,6 @@ class Currencies {
     static let AFN: Currency = Currency(code: "AFN", minorUnits: 2, factor: 100, name: "Afghani")
     static let ALL: Currency = Currency(code: "ALL", minorUnits: 2, factor: 100, name: "Lek")
     static let AMD: Currency = Currency(code: "AMD", minorUnits: 2, factor: 100, name: "Armenian Dram")
-    static let ANG: Currency = Currency(code: "ANG", minorUnits: 2, factor: 100, name: "Netherlands Antillean Guilder")
     static let AOA: Currency = Currency(code: "AOA", minorUnits: 2, factor: 100, name: "Kwanza")
     static let ARS: Currency = Currency(code: "ARS", minorUnits: 2, factor: 100, name: "Argentine Peso")
     static let AUD: Currency = Currency(code: "AUD", minorUnits: 2, factor: 100, name: "Australian Dollar")
@@ -52,7 +51,6 @@ class Currencies {
     static let COP: Currency = Currency(code: "COP", minorUnits: 2, factor: 100, name: "Colombian Peso")
     static let COU: Currency = Currency(code: "COU", minorUnits: 2, factor: 100, name: "Unidad de Valor Real")
     static let CRC: Currency = Currency(code: "CRC", minorUnits: 2, factor: 100, name: "Costa Rican Colon")
-    static let CUC: Currency = Currency(code: "CUC", minorUnits: 2, factor: 100, name: "Peso Convertible")
     static let CUP: Currency = Currency(code: "CUP", minorUnits: 2, factor: 100, name: "Cuban Peso")
     static let CVE: Currency = Currency(code: "CVE", minorUnits: 2, factor: 100, name: "Cabo Verde Escudo")
     static let CZK: Currency = Currency(code: "CZK", minorUnits: 2, factor: 100, name: "Czech Koruna")
@@ -173,6 +171,7 @@ class Currencies {
     static let VND: Currency = Currency(code: "VND", minorUnits: 0, factor: 1, name: "Dong")
     static let VUV: Currency = Currency(code: "VUV", minorUnits: 0, factor: 1, name: "Vatu")
     static let WST: Currency = Currency(code: "WST", minorUnits: 2, factor: 100, name: "Tala")
+    static let XAD: Currency = Currency(code: "XAD", minorUnits: 2, factor: 100, name: "Arab Accounting Dinar")
     static let XAF: Currency = Currency(code: "XAF", minorUnits: 0, factor: 1, name: "CFA Franc BEAC")
     static let XAG: Currency = Currency(code: "XAG", minorUnits: 0, factor: 1, name: "Silver")
     static let XAU: Currency = Currency(code: "XAU", minorUnits: 0, factor: 1, name: "Gold")
@@ -181,6 +180,7 @@ class Currencies {
     static let XBC: Currency = Currency(code: "XBC", minorUnits: 0, factor: 1, name: "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)")
     static let XBD: Currency = Currency(code: "XBD", minorUnits: 0, factor: 1, name: "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)")
     static let XCD: Currency = Currency(code: "XCD", minorUnits: 2, factor: 100, name: "East Caribbean Dollar")
+    static let XCG: Currency = Currency(code: "XCG", minorUnits: 2, factor: 100, name: "Caribbean Guilder")
     static let XDR: Currency = Currency(code: "XDR", minorUnits: 0, factor: 1, name: "SDR (Special Drawing Right)")
     static let XOF: Currency = Currency(code: "XOF", minorUnits: 0, factor: 1, name: "CFA Franc BCEAO")
     static let XPD: Currency = Currency(code: "XPD", minorUnits: 0, factor: 1, name: "Palladium")
@@ -202,7 +202,6 @@ class Currencies {
             "AFN": AFN,
             "ALL": ALL,
             "AMD": AMD,
-            "ANG": ANG,
             "AOA": AOA,
             "ARS": ARS,
             "AUD": AUD,
@@ -235,7 +234,6 @@ class Currencies {
             "COP": COP,
             "COU": COU,
             "CRC": CRC,
-            "CUC": CUC,
             "CUP": CUP,
             "CVE": CVE,
             "CZK": CZK,
@@ -356,6 +354,7 @@ class Currencies {
             "VND": VND,
             "VUV": VUV,
             "WST": WST,
+            "XAD": XAD,
             "XAF": XAF,
             "XAG": XAG,
             "XAU": XAU,
@@ -364,6 +363,7 @@ class Currencies {
             "XBC": XBC,
             "XBD": XBD,
             "XCD": XCD,
+            "XCG": XCG,
             "XDR": XDR,
             "XOF": XOF,
             "XPD": XPD,

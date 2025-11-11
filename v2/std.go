@@ -74,8 +74,6 @@ var (
 	ALL = Currency{code: "ALL", minorUnits: 2, factor: 100, name: "Lek"}
 	// AMD currency struct
 	AMD = Currency{code: "AMD", minorUnits: 2, factor: 100, name: "Armenian Dram"}
-	// ANG currency struct
-	ANG = Currency{code: "ANG", minorUnits: 2, factor: 100, name: "Netherlands Antillean Guilder"}
 	// AOA currency struct
 	AOA = Currency{code: "AOA", minorUnits: 2, factor: 100, name: "Kwanza"}
 	// ARS currency struct
@@ -140,8 +138,6 @@ var (
 	COU = Currency{code: "COU", minorUnits: 2, factor: 100, name: "Unidad de Valor Real"}
 	// CRC currency struct
 	CRC = Currency{code: "CRC", minorUnits: 2, factor: 100, name: "Costa Rican Colon"}
-	// CUC currency struct
-	CUC = Currency{code: "CUC", minorUnits: 2, factor: 100, name: "Peso Convertible"}
 	// CUP currency struct
 	CUP = Currency{code: "CUP", minorUnits: 2, factor: 100, name: "Cuban Peso"}
 	// CVE currency struct
@@ -382,6 +378,8 @@ var (
 	VUV = Currency{code: "VUV", minorUnits: 0, factor: 1, name: "Vatu"}
 	// WST currency struct
 	WST = Currency{code: "WST", minorUnits: 2, factor: 100, name: "Tala"}
+	// XAD currency struct
+	XAD = Currency{code: "XAD", minorUnits: 2, factor: 100, name: "Arab Accounting Dinar"}
 	// XAF currency struct
 	XAF = Currency{code: "XAF", minorUnits: 0, factor: 1, name: "CFA Franc BEAC"}
 	// XAG currency struct
@@ -398,6 +396,8 @@ var (
 	XBD = Currency{code: "XBD", minorUnits: 0, factor: 1, name: "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)"}
 	// XCD currency struct
 	XCD = Currency{code: "XCD", minorUnits: 2, factor: 100, name: "East Caribbean Dollar"}
+	// XCG currency struct
+	XCG = Currency{code: "XCG", minorUnits: 2, factor: 100, name: "Caribbean Guilder"}
 	// XDR currency struct
 	XDR = Currency{code: "XDR", minorUnits: 0, factor: 1, name: "SDR (Special Drawing Right)"}
 	// XOF currency struct
@@ -431,7 +431,6 @@ var currencies = map[string]Currency{
 	"AFN": AFN,
 	"ALL": ALL,
 	"AMD": AMD,
-	"ANG": ANG,
 	"AOA": AOA,
 	"ARS": ARS,
 	"AUD": AUD,
@@ -464,7 +463,6 @@ var currencies = map[string]Currency{
 	"COP": COP,
 	"COU": COU,
 	"CRC": CRC,
-	"CUC": CUC,
 	"CUP": CUP,
 	"CVE": CVE,
 	"CZK": CZK,
@@ -585,6 +583,7 @@ var currencies = map[string]Currency{
 	"VND": VND,
 	"VUV": VUV,
 	"WST": WST,
+	"XAD": XAD,
 	"XAF": XAF,
 	"XAG": XAG,
 	"XAU": XAU,
@@ -593,6 +592,7 @@ var currencies = map[string]Currency{
 	"XBC": XBC,
 	"XBD": XBD,
 	"XCD": XCD,
+	"XCG": XCG,
 	"XDR": XDR,
 	"XOF": XOF,
 	"XPD": XPD,
@@ -614,7 +614,6 @@ var ValidCodes = []string{
 	"AFN",
 	"ALL",
 	"AMD",
-	"ANG",
 	"AOA",
 	"ARS",
 	"AUD",
@@ -647,7 +646,6 @@ var ValidCodes = []string{
 	"COP",
 	"COU",
 	"CRC",
-	"CUC",
 	"CUP",
 	"CVE",
 	"CZK",
@@ -768,6 +766,7 @@ var ValidCodes = []string{
 	"VND",
 	"VUV",
 	"WST",
+	"XAD",
 	"XAF",
 	"XAG",
 	"XAU",
@@ -776,6 +775,7 @@ var ValidCodes = []string{
 	"XBC",
 	"XBD",
 	"XCD",
+	"XCG",
 	"XDR",
 	"XOF",
 	"XPD",
