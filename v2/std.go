@@ -90,8 +90,6 @@ var (
 	BBD = Currency{code: "BBD", minorUnits: 2, factor: 100, name: "Barbados Dollar"}
 	// BDT currency struct
 	BDT = Currency{code: "BDT", minorUnits: 2, factor: 100, name: "Taka"}
-	// BGN currency struct
-	BGN = Currency{code: "BGN", minorUnits: 2, factor: 100, name: "Bulgarian Lev"}
 	// BHD currency struct
 	BHD = Currency{code: "BHD", minorUnits: 3, factor: 1000, name: "Bahraini Dinar"}
 	// BIF currency struct
@@ -439,7 +437,6 @@ var currencies = map[string]Currency{
 	"BAM": BAM,
 	"BBD": BBD,
 	"BDT": BDT,
-	"BGN": BGN,
 	"BHD": BHD,
 	"BIF": BIF,
 	"BMD": BMD,
@@ -622,7 +619,6 @@ var ValidCodes = []string{
 	"BAM",
 	"BBD",
 	"BDT",
-	"BGN",
 	"BHD",
 	"BIF",
 	"BMD",

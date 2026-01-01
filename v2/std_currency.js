@@ -23,8 +23,6 @@ var stdCurrency = {
     BBD: { code: "BBD", name: "Barbados Dollar", minorUnits: 2, factor: 100},
     // BDT currency object
     BDT: { code: "BDT", name: "Taka", minorUnits: 2, factor: 100},
-    // BGN currency object
-    BGN: { code: "BGN", name: "Bulgarian Lev", minorUnits: 2, factor: 100},
     // BHD currency object
     BHD: { code: "BHD", name: "Bahraini Dinar", minorUnits: 3, factor: 1000},
     // BIF currency object

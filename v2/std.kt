@@ -13,7 +13,6 @@ data class Currency(val currencyCode: String, val minorUnits: Int, val factor: I
         "BAM" to Currency("BAM", 2, 100, "Convertible Mark"),
         "BBD" to Currency("BBD", 2, 100, "Barbados Dollar"),
         "BDT" to Currency("BDT", 2, 100, "Taka"),
-        "BGN" to Currency("BGN", 2, 100, "Bulgarian Lev"),
         "BHD" to Currency("BHD", 3, 1000, "Bahraini Dinar"),
         "BIF" to Currency("BIF", 0, 1, "Burundi Franc"),
         "BMD" to Currency("BMD", 2, 100, "Bermudian Dollar"),

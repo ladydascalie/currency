@@ -27,7 +27,6 @@ class Currencies {
     static let BAM: Currency = Currency(code: "BAM", minorUnits: 2, factor: 100, name: "Convertible Mark")
     static let BBD: Currency = Currency(code: "BBD", minorUnits: 2, factor: 100, name: "Barbados Dollar")
     static let BDT: Currency = Currency(code: "BDT", minorUnits: 2, factor: 100, name: "Taka")
-    static let BGN: Currency = Currency(code: "BGN", minorUnits: 2, factor: 100, name: "Bulgarian Lev")
     static let BHD: Currency = Currency(code: "BHD", minorUnits: 3, factor: 1000, name: "Bahraini Dinar")
     static let BIF: Currency = Currency(code: "BIF", minorUnits: 0, factor: 1, name: "Burundi Franc")
     static let BMD: Currency = Currency(code: "BMD", minorUnits: 2, factor: 100, name: "Bermudian Dollar")
@@ -210,7 +209,6 @@ class Currencies {
             "BAM": BAM,
             "BBD": BBD,
             "BDT": BDT,
-            "BGN": BGN,
             "BHD": BHD,
             "BIF": BIF,
             "BMD": BMD,
